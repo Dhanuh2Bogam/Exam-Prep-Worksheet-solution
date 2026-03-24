@@ -9,15 +9,15 @@ System.out.println(Arrays.toString(c));
 }
 
 public static int[] appendArrays(int[] a, int[] b){
-int[] arr = new int[((a.length()-1) + (b.length()-1))];
-for(int x = 0; x < a.length()-1; x++){
+int[] arr = new int[(a.length + b.length)];
+for(int x = 0; x <= a.length-1; x++){
 arr[x] = a[x];
 }
-int r = a.length()-1;
-for( r <= ((a.length()-1) + (b.length()-1)); r++){
-arr[r] = b[r-(a.length()-1)];
+
+for( int r = a.length ; r <= arr.length-1; r++){
+arr[r] = b[(r-(a.length))];
 }
-  return int[] arr; 
+  return arr; 
 }
 
 
